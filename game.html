@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>俄罗斯方块</title>
+<style type="text/css">
+#tb td { width: 30px; height: 34px; border: 1px solid #fff; }
+#tb2 td { width: 30px; height: 34px; border: 1px solid #fff; }
+.hid { visibility: hiden }
+.y { background-color: #33fc33; visibility: visible; border: 1px solid #aaa; }
+.l { background-color: #3333fc; visibility: visible; border: 1px solid #aaa; }
+.t { background-color: #fc3333; visibility: visible; border: 1px solid #aaa; }
+.tt { background-color: #33fcfc; visibility: visible; border: 1px solid #aaa; }
+.s { background-color: #fc33fc; visibility: visible; border: 1px solid #aaa; }
+.z { background-color: #fcfc33; visibility: visible; border: 1px solid #aaa; }
+.ll { background-color: #c356c3; visibility: visible; border: 1px solid #aaa; }
+.d { background-color: #000000; visibility: visible; border: 1px solid #aaa; }
+</style>
+</head >
+
+<body style="margin:0px 0px; padding:0px 0px;background-image:url(img/r61.jpg);background-size:cover;background-repeat:no-repeat;">
+<div>
+  <div id = "d_p" style="display:none;text-align:center; position:absolute; top:250px; color:#FF3333; width:100%;">
+    <h1>已暂停</h1>
+  </div>
+  <div id = "g_o" style="display:none;text-align:center; position:absolute; top:250px; color:#FF3333; width:100%;">
+    <h1>GAME OVER</h1>
+	<h1>按下Enter，重新开始游戏</h1>
+  </div>
+  <table style="margin:20px auto; border:1px solid #ccc; border-top:1px solid #fff" cellspacing="0px">
+    <tbody id="tb">
+    </tbody>
+  </table>
+</div>
+<table style="position:absolute; top:350px; right:250px" cellspacing="0px">
+  <tbody id="tb2">
+  <div style="position:absolute; top:300px; right:280px">
+  <h2>下一个方块</h2>
+  </div>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<div style="position:fixed; top:100px; left:250px;">
+  <h2>操作规则：</h2>
+  <h2>开始/暂停：Enter</h2>
+  <h2>变形：↑  w</h2>
+  <h2>左移：←  a</h2>
+  <h2>右移：→  d</h2>
+  <h2>下移：↓  s</h2>
+  <h2>速下：Spacebar</h2>
+</div>
+<div style="position:fixed;top:50px;right:300px;">
+  <h2>分数</h2>
+  <b><span id="score" >0</span></b>
+  <h2>等级</h2>
+  <b><span id="level">0</span></b>
+  <h2>游戏时间</h2>
+  <b><span id="gametime">0</span></b></div>
+</div>
+</body>
+</html>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="game.js"></script>
